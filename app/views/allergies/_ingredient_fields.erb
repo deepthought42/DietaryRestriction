@@ -1,0 +1,8 @@
+<p>
+	<% for ingredient in Ingredient.find(:all) %>
+		<div>
+			<%= check_box_tag "allergy[ingredient_ids][]", ingredient.id, @allergy.ingredients.include?(ingredient) %>
+			<%= ingredient.name %>
+		</div>
+	<% end %>
+</p>
