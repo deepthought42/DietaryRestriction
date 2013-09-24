@@ -54,6 +54,7 @@ SimpleNavigation::Configuration.run do |navigation|
 	primary.dom_id = 'navMenu'
 	
     # Add an item which has a sub navigation (same params, but with block)
+	primary.item :mushrooms, 'Products', products_path, :id => 'productLink'
     primary.item :plants, 'Ingredients', ingredients_path, :id => 'ingredientLink'
 	primary.item :mushrooms, 'Allergies', allergies_path, :id => 'allergyLink'
 
