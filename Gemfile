@@ -38,3 +38,5 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'simple-navigation'
+gem 'paperclip'
+gem 'aws-sdk'
