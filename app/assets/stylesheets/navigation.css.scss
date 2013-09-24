@@ -1,26 +1,26 @@
 #navMenu {
+    display: block;
+    text-align: center;
 	width: 100%;
-	margin: 0 0 3em 0;
-	padding: 0;
-	list-style: none;
 	background-color: #f2f2f2;
 	border-bottom: 1px solid #ccc; 
 	border-top: 1px solid #ccc;
 }
 
 #navMenu li {
-    height: auto;
-    padding: 0px 0px;
-    margin: 0px;
+	display: inline-block;
 }
 
 #navMenu li a { 
-	display: inline;
-	padding: 8px 15px;
-	text-decoration: none;
-	font-weight: bold;
-	color: #069;
-	border-right: 1px solid #ccc; 
+    padding: 5px 15px;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: inline-block;
+    color: #1d1d1d;
+    text-decoration: none;
+    font: bold .8em Georgia, "Times New Roman", Times, serif;
 }
 
 #navMenu a:hover {
