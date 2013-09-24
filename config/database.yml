@@ -6,21 +6,21 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: dietaryRestriction_development
+  database: DietaryRestriction_development
   pool: 5
   username: postgres
   password: oicu812
 test:
   adapter: postgresql
   encoding: unicode
-  database: dietaryRestriction_test
+  database: DietaryRestriction_test
   pool: 5
   username: postgres
   password: oicu812
 production:
   adapter: postgresql
   encoding: unicode
-  database: dietaryResctriction_production
+  database: DietaryResctriction_production
   pool: 5
   username: postgres
   password: oicu812
