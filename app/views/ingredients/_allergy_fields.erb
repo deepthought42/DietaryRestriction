@@ -1,4 +1,5 @@
 <p>
+	<span>Allergies</span>
 	<% for allergy in Allergy.find(:all) %>
 	  <div>
 		<%= check_box_tag "ingredient[allergy_ids][]", allergy.id, @ingredient.allergies.include?(allergy) %>
