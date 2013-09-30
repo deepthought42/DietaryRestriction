@@ -4,4 +4,12 @@ class Ingredient < ActiveRecord::Base
   has_and_belongs_to_many :products, :join_table => :ingredients_products
   accepts_nested_attributes_for :products, :reject_if => lambda { |a| a[:name].blank? }
   accepts_nested_attributes_for :allergies, :reject_if => lambda { |a| a[:name].blank? }
+  
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['lower(name) LIKE ?', "%#{search.downcase}%"])
+    else
+      find(:all)
+    end
+  end
 end

@@ -2,9 +2,9 @@ class AllergiesController < ApplicationController
   # GET /allergies
   # GET /allergies.json
   def index
-    @allergies = Allergy.all
-
-    respond_to do |format|
+    @allergies = Allergy.search(params[:search])
+    
+	respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @allergies }
     end

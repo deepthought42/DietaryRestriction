@@ -12,16 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :brand %><br />
-    <%= f.text_field :brand %>
+    <%= f.text_field :brand, { :class => (@product.brand ? "existingInput" : "newInputField"), :value => @product.brand || "Brand"} %>
   </div>
    <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, { :class => (@product.name ? "existingInput" : "newInputField"), :value => @product.name || "Product Name"} %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description, :rows => "3" %>
+    <%= f.text_area :description, {:rows => "3", :class => (@product.description ? "existingInput" : "newInputField"), :value => @product.description || "Product Description"} %>
   </div>
   
   <%= render "ingredient_fields" %>

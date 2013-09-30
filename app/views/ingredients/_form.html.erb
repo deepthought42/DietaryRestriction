@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, {:class => (@ingredient.name ? "existingInput" : "newInputField"), :title => "Name", :value => @ingredient.name || "Name"} %>
   </div>
   <%= render "allergy_fields" %>
   <div class="actions">

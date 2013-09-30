@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require_tree ./sitewide
 
 function remove_fields(link){
 	$(link).prev("input[type=hidden]").value = '1';
 	$(link).parent(".fields").hide();
 }
+
