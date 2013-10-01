@@ -3,6 +3,9 @@ class Allergy < ActiveRecord::Base
   has_and_belongs_to_many :ingredients, :join_table => :allergies_ingredients
   accepts_nested_attributes_for :ingredients, :reject_if => lambda { |a| a[:name].blank? }
   
+  #validation rules
+  validates_uniqueness_of :name
+  
   def self.search(search)
     if search
       find(:all, :conditions => ['lower(name) LIKE ?', "%#{search.downcase}%"])

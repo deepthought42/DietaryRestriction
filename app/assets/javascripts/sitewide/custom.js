@@ -1,4 +1,13 @@
+
+function remove_fields(link){
+  alert($(link).prev("input[type=hidden]").value);
+  alert("practice");
+  $(link).prev("input[type=hidden]").value = '1';
+	$(link).parent(".fields").hide();
+}
+
 $(document).ready( function() {	
+
 	$("input.newInputField").on("focus", function() {
 		this.value=""; this.style.color="#000";
 	});

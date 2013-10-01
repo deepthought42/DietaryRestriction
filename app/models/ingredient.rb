@@ -5,6 +5,9 @@ class Ingredient < ActiveRecord::Base
   accepts_nested_attributes_for :products, :reject_if => lambda { |a| a[:name].blank? }
   accepts_nested_attributes_for :allergies, :reject_if => lambda { |a| a[:name].blank? }
   
+  #validation rules
+  validates_uniqueness_of :name
+  
   def self.search(search)
     if search
       find(:all, :conditions => ['lower(name) LIKE ?', "%#{search.downcase}%"])

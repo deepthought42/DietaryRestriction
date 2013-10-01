@@ -1,9 +1,4 @@
-<p>
-	<span>Ingredients</span>
-	<% for ingredient in Ingredient.find(:all) %>
-	  <div>
-		<%= check_box_tag "product[ingredient_ids][]", ingredient.id, @product.ingredients.include?(ingredient) %>
-	    <%= ingredient.name %>
-	  </div>
-	<% end %>
+<p class="fields">
+  <%= f.text_field :name %>
+  <%= link_to_remove_fields "remove", f %>
 </p>
